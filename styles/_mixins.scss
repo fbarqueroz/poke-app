@@ -14,11 +14,12 @@
 
 /* Pokémon type pill */
 @mixin tipo-pill {
-  color: $white;
+  color: #fff;
   background-color: rgba(255, 255, 230, 0.3);
-  border-radius: $radius-sm;
+  border-radius: 20px;
   text-align: center;
   padding: 2px 10px;
   text-transform: capitalize;
   place-self: flex-start;
 }
+

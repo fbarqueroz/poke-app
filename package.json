@@ -3,6 +3,10 @@
   "private": true,
   "css.validate": false,
   "scss.validate": false,
+
+  "engines": {
+  "node": "16.x"
+},
   "scripts": {
     "dev": "next dev",
     "build": "next build",

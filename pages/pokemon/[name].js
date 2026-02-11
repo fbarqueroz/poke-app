@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import PokeCss from '../../styles/Poke.module.scss'
 import Link from 'next/link'
 
