@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 /* eslint-disable @next/next/no-img-element */
 import PokeCss from '../../styles/Poke.module.scss'
 import Link from 'next/link'
@@ -13,11 +14,19 @@ export default function Pokemon({ data }) {
                             pathname: '/',
                             as: '/'
                         }}>
-                            <a>
-                                <svg width="18" height="25" viewBox="0 0 18 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 2L2 12.5L16 23.5" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </a>
+                        <Link href="/" aria-label="Volver">
+                            <svg width="18" height="25" viewBox="0 0 18 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                d="M16 2L2 12.5L16 23.5"
+                                stroke="white"
+                                strokeWidth="3"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                />
+                            </svg>
+                        </Link>
+
+                            
                         </Link>
 
                         <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">

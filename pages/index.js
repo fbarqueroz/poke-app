@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState } from 'react'
 import HomeCss from '../styles/Home.module.scss'
 import Link from 'next/link'
@@ -63,45 +64,43 @@ export default function Home({ minimimosDatos, tipos }) {
         </div>
         <div className={HomeCss.columnas}>
 
-          <ul>
-            {filtro ? filtro.map(pokemon => (
-              <li key={pokemon.id}>
-                <Link scroll={false} href={{
-                  pathname: '/pokemon/[name]',
-                  query: { name: pokemon.name }
-                }}>
-                  <a>
-                    <div className={`${HomeCss.card} ${pokemon.types[0].type.name}`}>
-                      <div className={HomeCss.nombreTipos}>
+        <ul>
+          {filtro
+            ? filtro.map((pokemon) => (
+                <li key={pokemon.id}>
+                  <Link
+                    scroll={false}
+                    href={{
+                      pathname: "/pokemon/[name]",
+                      query: { name: pokemon.name },
+                    }}
+                    className={`${HomeCss.card} ${pokemon.types[0].type.name}`}
+                  >
+                    <div className={HomeCss.nombreTipos}>
+                      <h3>{pokemon.name}</h3>
 
-                        <h3 exit={{ opacity: 0 }}>{pokemon.name}</h3>
-
-
-                        <div className={HomeCss.tipos}>
-                          {pokemon.types.map((tipos, index) => {
-                            return (
-                              <div key={index} className={HomeCss.tipo}>
-                                {tipos.type.name}
-                              </div>
-                            )
-                          })}
-                        </div>
+                      <div className={HomeCss.tipos}>
+                        {pokemon.types.map((tipos, index) => (
+                          <div key={index} className={HomeCss.tipo}>
+                            {tipos.type.name}
+                          </div>
+                        ))}
                       </div>
-                      <img
-                        src={pokemon.sprites}
-                        alt={pokemon.name}
-                        width={100}
-                        height={100}
-                        className={HomeCss.imagen}
-                      />
                     </div>
-                  </a>
 
+                    <img
+                      src={pokemon.sprites}
+                      alt={pokemon.name}
+                      width={100}
+                      height={100}
+                      className={HomeCss.imagen}
+                    />
+                  </Link>
+                </li>
+              ))
+            : "Cargando..."}
+        </ul>
 
-                </Link>
-              </li>
-            )) : 'Cargando...'}
-          </ul>
         </div>
 
 
