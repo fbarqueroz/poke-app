@@ -1,0 +1,56 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.Info {
+  padding: 0 15px;
+
+  .imagen {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .tipos {
+    display: flex;
+  }
+
+  .tipo {
+    @include tipo-pill;
+    margin-bottom: 4px;
+    margin-right: 5px;
+    font-size: 16px;
+
+    h3 {
+      margin: 0;
+    }
+  }
+}
+
+.masInfo {
+  border-radius: $radius-lg;
+  height: 100px;
+  margin-top: -50px;
+  background-color: $white;
+}
+
+.nombre {
+  @include flex-between;
+  margin-top: 20px;
+
+  h1 {
+    color: $white;
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  span {
+    font-size: 22px;
+    color: $white;
+    font-weight: 600;
+  }
+}
+
+.navegacion {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,36 @@
+/* Font */
+$base-font: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+/* Colors */
+$white: #fff;
+$black: #000;
+
+/* UI */
+$radius-sm: 20px;
+$radius-lg: 30px;
+
+/* Pokémon type colors */
+$types: (
+  bug: #aedf78,
+  water: #43ccff,
+  grass: #00ca91,
+  fire: #e95c4d,
+  normal: #a5a5a5,
+  poison: #611380,
+  electric: #f9be00,
+  ground: #bfac21,
+  fairy: #f87ea7,
+  fighting: #e81319,
+  psychic: #8a0532,
+  ghost: #8e55a4,
+  rock: #776a3e,
+  ice: #66d1e5,
+  flying: #5eb9b2,
+  dark: #2d221c,
+  dragon: #29036a,
+  steel: #7b8e8a,
+  unknown: #454545,
+  shadow: #4f4f4f,
+  white: #fff
+);

@@ -1,0 +1,85 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.container {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  ul {
+    list-style: none;
+    padding: 0 15px;
+  }
+}
+
+.titulo {
+  padding: 0 15px;
+}
+
+.columnas {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+}
+
+.card {
+  display: flex;
+  padding: 15px 10px 15px 15px;
+  border-radius: 8px;
+  position: relative;
+  min-height: 100px;
+
+  .imagen {
+    position: absolute;
+    right: -15px;
+    top: 10px;
+  }
+
+  .tipos {
+    @include flex-column;
+  }
+
+  .tipo {
+    @include tipo-pill;
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+}
+
+.nombreTipos {
+  @include flex-column;
+
+  h3 {
+    margin: 0;
+    color: #fff;
+    text-transform: capitalize;
+  }
+}
+
+.filtros {
+  display: flex;
+  padding: 15px;
+}
+
+.botones {
+  display: flex;
+  overflow: auto;
+  padding: 0 15px;
+}
+
+.botonFiltro {
+  border-radius: 8px;
+  padding: 3px 15px;
+  margin: 0 5px;
+  text-transform: capitalize;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  color: #fff
+}
+
+.botonTodos {
+  color: #000;
+}
